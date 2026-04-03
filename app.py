@@ -261,12 +261,12 @@ PLOTLY_LAYOUT = dict(
 # ── Load data ─────────────────────────────────────────────────────────────────
 @st.cache_data
 def load_data():
-    with open("data/analyzed/brand_summary.json", encoding="utf-8") as f:
+    with open("data/brand_summary.json", encoding="utf-8") as f:
         summary = json.load(f)
-    with open("data/analyzed/insights.json", encoding="utf-8") as f:
+    with open("data/insights.json", encoding="utf-8") as f:
         insights = json.load(f)
-    products = pd.read_csv("data/clean/products_clean.csv")
-    reviews  = pd.read_csv("data/analyzed/reviews_with_aspects.csv")
+    products = pd.read_csv("data/products_clean.csv")
+    reviews  = pd.read_csv("data/reviews_with_aspects.csv")
     return summary, insights, products, reviews
 
 summary, insights, products, reviews = load_data()
