@@ -1,0 +1,473 @@
+{
+  "Safari": {
+    "sentiment": {
+      "avg_polarity": -0.232,
+      "avg_weighted_polarity": -0.154,
+      "positive_pct": 36.2,
+      "negative_pct": 55.1,
+      "neutral_pct": 8.7,
+      "total_reviews": 69
+    },
+    "pricing": {
+      "avg_price": 2289.0,
+      "avg_mrp": 11061.67,
+      "avg_discount_pct": 78.6,
+      "min_price": 1399.0,
+      "max_price": 4449.0,
+      "inflated_mrp_flag": true
+    },
+    "ratings": {
+      "avg_star_rating": 4.07,
+      "total_products": 15,
+      "avg_review_count": 16036.0
+    },
+    "aspects": {
+      "wheels": 0.0,
+      "zipper": -0.576,
+      "handle": -0.417,
+      "material": 0.1,
+      "durability": 0.0,
+      "size": -0.248,
+      "price": -0.227
+    },
+    "themes": {
+      "top_praise": [
+        "good quality",
+        "quality good",
+        "good product",
+        "excellent",
+        "money",
+        "value",
+        "value money",
+        "colour",
+        "expected",
+        "marvelous"
+      ],
+      "top_complaints": [
+        "poor",
+        "lock",
+        "disappointing",
+        "handle",
+        "working",
+        "open",
+        "quality good",
+        "unable",
+        "good product",
+        "broken"
+      ],
+      "praise_examples": [
+        "Fantastic colour good packaging। Quality good wheels smooth",
+        "Reasonable price and good quality along finishing and looking wise good also",
+        "Good quality, decent size and comes with a wet pouch which is helpful for all toiletries"
+      ],
+      "complaint_examples": [
+        "Received locked product, unable to open",
+        "very disappointing",
+        "One use and paint coming off logo, lock code resets every time I use it, wheels are worn off badly, all just in one use"
+      ]
+    },
+    "anomalies": [
+      {
+        "type": "hidden_dissatisfaction",
+        "description": "6 reviews (8.7%) gave high stars but text is negative",
+        "severity": "medium",
+        "examples": [
+          "Khupach chan aahe.",
+          "Received locked product, unable to open."
+        ]
+      }
+    ],
+    "trust_signals": {
+      "unverified_purchase_pct": 7.2,
+      "short_positive_count": 1,
+      "duplicate_review_count": 0
+    },
+    "value_for_money": {
+      "avg_price": 2413.49,
+      "avg_sentiment": -0.154,
+      "band_sentiment": {
+        "budget": -0.057,
+        "mid": -0.196
+      },
+      "vfm_raw_score": -0.0637,
+      "vfm_score_normalized": 0.0
+    }
+  },
+  "Skybags": {
+    "sentiment": {
+      "avg_polarity": 0.323,
+      "avg_weighted_polarity": 0.227,
+      "positive_pct": 64.6,
+      "negative_pct": 25.0,
+      "neutral_pct": 10.4,
+      "total_reviews": 48
+    },
+    "pricing": {
+      "avg_price": 2178.71,
+      "avg_mrp": 6786.43,
+      "avg_discount_pct": 67.8,
+      "min_price": 1089.0,
+      "max_price": 3699.0,
+      "inflated_mrp_flag": false
+    },
+    "ratings": {
+      "avg_star_rating": 4.2,
+      "total_products": 14,
+      "avg_review_count": 7263.0
+    },
+    "aspects": {
+      "wheels": 0.3,
+      "zipper": -0.083,
+      "handle": -0.1,
+      "material": 0.608,
+      "durability": 0.454,
+      "size": 0.672,
+      "price": 0.556
+    },
+    "themes": {
+      "top_praise": [
+        "good product",
+        "sturdy",
+        "durable",
+        "worth",
+        "size",
+        "cabin",
+        "money",
+        "value",
+        "value money",
+        "spacious"
+      ],
+      "top_complaints": [
+        "strong",
+        "working",
+        "lock",
+        "lock working",
+        "missing",
+        "zipper",
+        "zipper missing",
+        "return",
+        "sent",
+        "bad product"
+      ],
+      "praise_examples": [
+        "Overall good product",
+        "Very durable and has good capacity",
+        "Very good product"
+      ],
+      "complaint_examples": [
+        "Bad product not strong this wheel 👎🏻",
+        "First they sent me someother product in the suitcase box then did a return gave me faulty chain which is not working properly",
+        "Lock not working"
+      ]
+    },
+    "anomalies": [
+      {
+        "type": "hidden_dissatisfaction",
+        "description": "2 reviews (4.2%) gave high stars but text is negative",
+        "severity": "medium",
+        "examples": [
+          "Same brand all of you was going but sent different colour",
+          "It is not strong enough"
+        ]
+      }
+    ],
+    "trust_signals": {
+      "unverified_purchase_pct": 0.0,
+      "short_positive_count": 1,
+      "duplicate_review_count": 0
+    },
+    "value_for_money": {
+      "avg_price": 2256.19,
+      "avg_sentiment": 0.227,
+      "band_sentiment": {
+        "budget": 0.222,
+        "mid": 0.235
+      },
+      "vfm_raw_score": 0.1007,
+      "vfm_score_normalized": 100.0
+    }
+  },
+  "American Tourister": {
+    "sentiment": {
+      "avg_polarity": 0.057,
+      "avg_weighted_polarity": 0.045,
+      "positive_pct": 47.5,
+      "negative_pct": 41.0,
+      "neutral_pct": 11.5,
+      "total_reviews": 61
+    },
+    "pricing": {
+      "avg_price": 3313.13,
+      "avg_mrp": 8808.67,
+      "avg_discount_pct": 60.8,
+      "min_price": 2249.0,
+      "max_price": 5299.0,
+      "inflated_mrp_flag": false
+    },
+    "ratings": {
+      "avg_star_rating": 4.16,
+      "total_products": 15,
+      "avg_review_count": 4724.0
+    },
+    "aspects": {
+      "wheels": 0.167,
+      "zipper": -0.15,
+      "handle": -0.25,
+      "material": -0.2,
+      "durability": 0.025,
+      "size": -0.2,
+      "price": 0.179
+    },
+    "themes": {
+      "top_praise": [
+        "awesome",
+        "money",
+        "value",
+        "value money",
+        "love",
+        "nice product",
+        "weight",
+        "super",
+        "quality product",
+        "super quality"
+      ],
+      "top_complaints": [
+        "damged",
+        "qualoty",
+        "usuful",
+        "open",
+        "lock",
+        "open lock",
+        "chain",
+        "poor",
+        "poor quality",
+        "delivered"
+      ],
+      "praise_examples": [
+        "Original and value for money",
+        "Very good nice product 100000%worth for money",
+        "It is definitely value for money"
+      ],
+      "complaint_examples": []
+    },
+    "anomalies": [
+      {
+        "type": "hidden_dissatisfaction",
+        "description": "3 reviews (4.9%) gave high stars but text is negative",
+        "severity": "medium",
+        "examples": [
+          "Qualoty",
+          "Not value for money, weight was less, that’s the pros\nAnd the handling thing was not thick, its somehow felt like not durable, but overall it was okey"
+        ]
+      }
+    ],
+    "trust_signals": {
+      "unverified_purchase_pct": 6.6,
+      "short_positive_count": 1,
+      "duplicate_review_count": 0
+    },
+    "value_for_money": {
+      "avg_price": 3493.07,
+      "avg_sentiment": 0.045,
+      "band_sentiment": {
+        "mid": 0.055,
+        "premium": 0.017
+      },
+      "vfm_raw_score": 0.0128,
+      "vfm_score_normalized": 46.5
+    }
+  },
+  "VIP": {
+    "sentiment": {
+      "avg_polarity": 0.015,
+      "avg_weighted_polarity": 0.024,
+      "positive_pct": 47.8,
+      "negative_pct": 43.3,
+      "neutral_pct": 9.0,
+      "total_reviews": 67
+    },
+    "pricing": {
+      "avg_price": 3911.27,
+      "avg_mrp": 12008.2,
+      "avg_discount_pct": 66.0,
+      "min_price": 2199.0,
+      "max_price": 6380.0,
+      "inflated_mrp_flag": false
+    },
+    "ratings": {
+      "avg_star_rating": 4.06,
+      "total_products": 15,
+      "avg_review_count": 169.0
+    },
+    "aspects": {
+      "wheels": -0.2,
+      "zipper": -0.044,
+      "handle": -0.402,
+      "material": 0.333,
+      "durability": 0.101,
+      "size": -0.028,
+      "price": 0.667
+    },
+    "themes": {
+      "top_praise": [
+        "quality good",
+        "strong",
+        "worth",
+        "price",
+        "space",
+        "good product",
+        "product nice",
+        "best quality",
+        "good bag",
+        "good space"
+      ],
+      "top_complaints": [
+        "handle",
+        "hard",
+        "low quality",
+        "duplicate",
+        "handle breaked",
+        "broken",
+        "duplicate product",
+        "delivered",
+        "torn",
+        "bag big"
+      ],
+      "praise_examples": [
+        "stylish and strong",
+        "Very strong and spacious",
+        "Beautiful and strong product"
+      ],
+      "complaint_examples": [
+        "Low Quality, less strong look like",
+        "Zippers are very hard",
+        "Very low quality"
+      ]
+    },
+    "anomalies": [
+      {
+        "type": "hidden_dissatisfaction",
+        "description": "5 reviews (7.5%) gave high stars but text is negative",
+        "severity": "medium",
+        "examples": [
+          "Order return delivery boy behevior is so bad\nAnd delivery boy so bad product is good buy delivery boy behevior so bad",
+          "टनाटन है। कोई दिक्कत नहीं है।"
+        ]
+      },
+      {
+        "type": "aspect_anomaly",
+        "description": "Overall sentiment positive (0.02) but handle scores very negative (-0.4)",
+        "severity": "medium",
+        "aspect": "handle"
+      }
+    ],
+    "trust_signals": {
+      "unverified_purchase_pct": 3.0,
+      "short_positive_count": 0,
+      "duplicate_review_count": 0
+    },
+    "value_for_money": {
+      "avg_price": 3818.79,
+      "avg_sentiment": 0.024,
+      "band_sentiment": {
+        "mid": 0.035,
+        "premium": 0.002
+      },
+      "vfm_raw_score": 0.0063,
+      "vfm_score_normalized": 42.6
+    }
+  },
+  "Aristocrat": {
+    "sentiment": {
+      "avg_polarity": 0.209,
+      "avg_weighted_polarity": 0.158,
+      "positive_pct": 53.7,
+      "negative_pct": 29.9,
+      "neutral_pct": 16.4,
+      "total_reviews": 67
+    },
+    "pricing": {
+      "avg_price": 2264.71,
+      "avg_mrp": 11105.71,
+      "avg_discount_pct": 79.2,
+      "min_price": 1439.0,
+      "max_price": 4499.0,
+      "inflated_mrp_flag": true
+    },
+    "ratings": {
+      "avg_star_rating": 4.16,
+      "total_products": 14,
+      "avg_review_count": 3904.0
+    },
+    "aspects": {
+      "wheels": 0.6,
+      "zipper": -0.245,
+      "handle": 0.7,
+      "material": -0.25,
+      "durability": 0.404,
+      "size": 0.722,
+      "price": 0.429
+    },
+    "themes": {
+      "top_praise": [
+        "price",
+        "worth",
+        "good price",
+        "wonderful",
+        "durable",
+        "excellent",
+        "excellent product",
+        "good quality",
+        "sturdy",
+        "looks"
+      ],
+      "top_complaints": [
+        "broken",
+        "quality low",
+        "quality good",
+        "zip broken",
+        "received set",
+        "fail",
+        "zip fail",
+        "lock",
+        "torn",
+        "cheep"
+      ],
+      "praise_examples": [
+        "This Bag is Very Good at this Price, bag quality and color is good, wheels are strong enough, Size is impressive, The weight remain balanced on pulling it",
+        "Overall A good Product at such a price",
+        "Its really worth 200% worth"
+      ],
+      "complaint_examples": [
+        "Had to return it due to low quality and broken lock",
+        "Its bottom zip broken"
+      ]
+    },
+    "anomalies": [
+      {
+        "type": "hidden_dissatisfaction",
+        "description": "2 reviews (3.0%) gave high stars but text is negative",
+        "severity": "medium",
+        "examples": [
+          "Branded with lower price in Amazon.",
+          "👌👌👌❤️❤️❤️❤️🥰🥰🥰🥰 bahut badhiya hai pecking bhi bhut achi hai"
+        ]
+      }
+    ],
+    "trust_signals": {
+      "unverified_purchase_pct": 3.0,
+      "short_positive_count": 2,
+      "duplicate_review_count": 0
+    },
+    "value_for_money": {
+      "avg_price": 2348.1,
+      "avg_sentiment": 0.158,
+      "band_sentiment": {
+        "budget": 0.049,
+        "mid": 0.212
+      },
+      "vfm_raw_score": 0.0675,
+      "vfm_score_normalized": 79.8
+    }
+  }
+}

@@ -1,0 +1,37 @@
+[
+  {
+    "id": 1,
+    "title": "Safari Has the Biggest Gap Between Stars and Real Sentiment",
+    "insight": "Safari has an average star rating of 4.07 — respectable on the surface. But BERT sentiment analysis of review text gives a weighted polarity of -0.154, equivalent to roughly 2.2 on a 5-point scale. That's a gap of 1.84 points. Customers are rating generously but writing negatively — a pattern common when buyers feel social pressure to rate high on Amazon India.",
+    "implication": "Star ratings for Safari are unreliable signals. Any competitor benchmarking against Safari's star rating is being misled. Focus on text sentiment, not stars.",
+    "severity": "high"
+  },
+  {
+    "id": 2,
+    "title": "Skybags Is the Hidden Gem — Best Value, Not the Most Visible Brand",
+    "insight": "Skybags scores 100.0/100 on value for money — highest across all brands. Average price is ₹2256.19 with a sentiment polarity of 0.227. Compare this to Aristocrat at vfm=79.8/100. 48 reviews vs 69 for the most reviewed brand — Skybags is flying under the radar.",
+    "implication": "A budget-conscious buyer choosing based on reviews alone will miss Skybags. Brands competing in the budget segment should treat Skybags as the benchmark, not Safari.",
+    "severity": "high"
+  },
+  {
+    "id": 3,
+    "title": "VIP's Handle Problem Is Hidden Behind Good Overall Scores",
+    "insight": "VIP has an overall sentiment polarity of 0.024 — positive territory. But drilling into aspect-level sentiment reveals a handle score of -0.402, deeply negative. Customers are satisfied overall but consistently frustrated with the handle. This would never surface from star ratings or overall sentiment alone.",
+    "implication": "A product team at a competing brand should highlight handle quality in marketing. A buyer considering VIP should specifically check handle-related reviews before purchasing.",
+    "severity": "high"
+  },
+  {
+    "id": 4,
+    "title": "VIP Charges ₹1733.0 More Than Skybags But Sentiment Tells a Different Story",
+    "insight": "VIP is the most expensive brand at avg ₹3911.27, while Skybags averages ₹2178.71. That's a ₹1733.0 premium. But sentiment polarity difference is only -0.203 — the premium brand actually scores lower. VIP also has 43.3% negative reviews vs 25.0% for Skybags. The price premium is not justified by customer experience data.",
+    "implication": "Buyers paying a premium for VIP are not getting proportionally better experience. Skybags delivers comparable or better sentiment at significantly lower cost.",
+    "severity": "high"
+  },
+  {
+    "id": 5,
+    "title": "Safari, Aristocrat Use Inflated MRP — Their Discounts Are Manufactured",
+    "insight": "Safari, Aristocrat show average discounts of 78.9% — flagged as inflated MRP (>70% discount is a known Amazon India dark pattern where brands set artificially high list prices to manufacture discount perception). In contrast Skybags, American Tourister, VIP show 64.9% average discount on more realistic MRPs. The actual selling prices are similar across brands — the discount percentage is meaningless as a value signal here.",
+    "implication": "Buyers should ignore discount % completely for Safari, Aristocrat and compare actual selling prices only. Dashboard filters based on discount % will mislead users for these brands.",
+    "severity": "medium"
+  }
+]
