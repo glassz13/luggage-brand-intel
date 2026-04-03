@@ -1,4 +1,4 @@
-# 🧳 Luggage Intel — Amazon India Competitive Intelligence
+# 🧳 Luggage Brands — Amazon India Competitive Intelligence
 
 > Scrape → Analyze → Compare → Decide. Built for the Moonshot AI Agent Internship.
 
