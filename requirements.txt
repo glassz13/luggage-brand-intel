@@ -1,0 +1,9 @@
+streamlit
+plotly
+pandas
+transformers
+torch
+scikit-learn
+openai
+tqdm
+python-dotenv
