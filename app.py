@@ -763,7 +763,7 @@ elif page == "💬  Ask the Agent":
 
     # ── Groq client ───────────────────────────────────────────────────────────
     groq_client = OpenAI(
-        api_key  = "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",
+        api_key  = st.secrets["GROK_API_KEY"],
         base_url = "https://api.groq.com/openai/v1",
     )
 
