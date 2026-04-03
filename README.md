@@ -5,7 +5,7 @@
 [![Live Demo](https://img.shields.io/badge/Live%20Demo-Streamlit-FF4B4B?style=for-the-badge&logo=streamlit)](https://luggage-brand-intel-96woi23brqzhsn5pqslnmv.streamlit.app)
 [![Python](https://img.shields.io/badge/Python-3.10+-3776AB?style=for-the-badge&logo=python)](https://python.org)
 
-![Dashboard Demo](demo.gif)
+🎥 [Watch walkthrough](https://loom.com/share/your-link-here)
 
 ---
 
