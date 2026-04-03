@@ -42,7 +42,8 @@ st.markdown("""
     p, span, div, label {
         color: #f1f5f9;
     }
-
+.block-container { padding-top: 0rem !important; }
+[data-testid="stSidebarContent"] { padding-top: 0rem !important; }
     /* Metric cards */
     .metric-card {
         background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
