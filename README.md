@@ -5,8 +5,6 @@
 [![Live Demo](https://img.shields.io/badge/Live%20Demo-Streamlit-FF4B4B?style=for-the-badge&logo=streamlit)](https://luggage-brand-intel-96woi23brqzhsn5pqslnmv.streamlit.app)
 [![Python](https://img.shields.io/badge/Python-3.10+-3776AB?style=for-the-badge&logo=python)](https://python.org)
 
-🎥 [Watch walkthrough](https://loom.com/share/your-link-here)
-
 ---
 
 ## What It Does
@@ -17,6 +15,8 @@ Pulls Amazon India luggage brand data, runs a full NLP pipeline on customer revi
 - Where do star ratings lie but review text tells the truth?
 - Which aspects (zipper, wheels, handle...) are failing silently?
 - Which brand gives the best value per rupee?
+
+🎥 [Watch walkthrough](https://www.loom.com/share/515072f1acb14a268e929d45b20aa8ba)
 
 **[→ Try the live dashboard](https://luggage-brand-intel-96woi23brqzhsn5pqslnmv.streamlit.app)**
 
