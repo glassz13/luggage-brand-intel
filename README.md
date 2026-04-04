@@ -1,4 +1,4 @@
-# 🧳 Luggage Brand Intel
+# Luggage Brand Intel
 
 ![Python](https://img.shields.io/badge/Python-3.10+-blue?style=flat-square&logo=python)
 ![Playwright](https://img.shields.io/badge/Scraping-Playwright-green?style=flat-square)
