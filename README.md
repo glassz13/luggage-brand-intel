@@ -15,12 +15,6 @@ The goal was not to build a report. The goal was to build something a brand mana
 
 ---
 
-## Demo
-
-<!-- INSERT DEMO VIDEO HERE -->
-
----
-
 ## Approach
 
 The project follows a four-stage pipeline:
