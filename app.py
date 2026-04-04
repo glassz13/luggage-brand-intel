@@ -774,7 +774,7 @@ elif page == "💬  Ask the Agent":
         "vip":                "VIP",
         "aristocrat":         "Aristocrat",
     }
-SYSTEM_PROMPT = """You are a friendly competitive intelligence assistant for luggage brands on Amazon India.
+    SYSTEM_PROMPT = """You are a friendly competitive intelligence assistant for luggage brands on Amazon India.
 You have access to structured data including sentiment scores, pricing, aspect-level sentiment,
 themes, anomalies, and value-for-money scores derived from real customer reviews.
 
