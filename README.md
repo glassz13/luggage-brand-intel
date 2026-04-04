@@ -3,7 +3,7 @@
 
 **Built by Mohit Kumar Meena · Moonshot AI Agent Internship Assignment**
 
-**[🚀 Live Dashboard](https://luggage-brand-intel-96woi23brqzhsn5pqslnmv.streamlit.app/)** · **[GitHub](https://github.com/glassz13/luggage-brand-intel)**
+**[🚀 Live Dashboard](https://luggage-brand-intel-96woi23brqzhsn5pqslnmv.streamlit.app/)** 
 
 ---
 
@@ -13,7 +13,7 @@ The Indian luggage market on Amazon is crowded, discount-heavy, and review-manip
 
 The goal was not to build a report. The goal was to build something a brand manager could actually open, explore, and act on.
 
----
+
 
 ## Approach
 
