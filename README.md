@@ -1,135 +1,189 @@
-# 🧳 Luggage Brands — Amazon India Competitive Intelligence
+# 🧳 Luggage Brand Intel
+> Competitive intelligence dashboard for luggage brands on Amazon India — built for Moonshot AI Agent Internship Assignment
 
-> Scrape → Analyze → Compare → Decide. Built for the Moonshot AI Agent Internship.
-
-[![Live Demo](https://img.shields.io/badge/Live%20Demo-Streamlit-FF4B4B?style=for-the-badge&logo=streamlit)](https://luggage-brand-intel-96woi23brqzhsn5pqslnmv.streamlit.app)
-[![Python](https://img.shields.io/badge/Python-3.10+-3776AB?style=for-the-badge&logo=python)](https://python.org)
+**[🚀 Live Dashboard](https://luggage-brand-intel-96woi23brqzhsn5pqslnmv.streamlit.app/)** · **[GitHub](https://github.com/glassz13/luggage-brand-intel)** · Built by **Mohit Kumar Meena**
 
 ---
 
-## What It Does
+## What this does
 
-Pulls Amazon India luggage brand data, runs a full NLP pipeline on customer reviews, and serves a competitive intelligence dashboard answering:
+Scrapes Amazon India product listings and customer reviews for 5 major luggage brands, runs sentiment and aspect-level analysis, and presents everything in an interactive competitive intelligence dashboard — the kind a product manager or brand strategist would actually use.
 
-- Which brands win on sentiment vs price?
-- Where do star ratings lie but review text tells the truth?
-- Which aspects (zipper, wheels, handle...) are failing silently?
-- Which brand gives the best value per rupee?
-
-🎥 [Watch walkthrough](https://www.loom.com/share/515072f1acb14a268e929d45b20aa8ba)
-
-**[→ Try the live dashboard](https://luggage-brand-intel-96woi23brqzhsn5pqslnmv.streamlit.app)**
+Not a static report. A decision-ready tool.
 
 ---
 
-## Pipeline
-```
-scraper.py
-    ↓  products + reviews CSVs
-sentiment.py
-    ↓  BERT sentiment per review (nlptown multilingual)
-    ↓  Confidence-weighted polarity (-1 to +1)
-    ↓  Aspect extraction — 7 aspects (wheels, zipper, handle,
-    ↓  material, durability, size, price)
-    ↓  Keyword match → sentence split → BERT on matched sentences
-    ↓  TF-IDF themes — top praise + complaints per brand
-    ↓  Anomaly detection — hidden dissatisfaction, aspect failures, rating skew
-    ↓  Value for money — sentiment adjusted by price band
-    ↓  brand_summary.json
-insights.py
-    ↓  5 non-obvious insights generated from structured data
-    ↓  insights.json
-app.py  →  Streamlit dashboard + Groq AI agent
-```
+## Demo
+
+<!-- INSERT DEMO VIDEO HERE -->
 
 ---
 
-## Dashboard Views
+## Dashboard Pages
 
-| View | What it shows |
+| Page | What it shows |
 |------|--------------|
-| 🏠 Overview | Sentiment ranking, VFM scores, pricing bubble chart, brand scorecard |
-| ⚔️ Brand Comparison | Radar chart across 7 aspects, sentiment distribution, themes side by side |
-| 🔍 Product Drilldown | Filterable product table with per-review BERT predictions |
-| 🤖 Agent Insights | 5 auto-generated non-obvious conclusions from the data |
-| 💬 Ask the Agent | Groq-powered AI answers brand questions from structured data |
+| 🏠 Overview | Sentiment ranking, value-for-money scores, price vs sentiment bubble chart, brand scorecard |
+| ⚔️ Brand Comparison | Side-by-side sentiment distribution, pricing, aspect radar chart, top praise & complaints |
+| 🔍 Product Drilldown | Filterable product table, price distribution, per-product review explorer |
+| 🤖 Agent Insights | 5 non-obvious conclusions auto-generated from review + pricing data, trust signal analysis |
+| 💬 Ask the Agent | Groq-powered (LLaMA 3.1) chat agent grounded in real scraped data |
+
+---
+
+## Data Pipeline
+```
+scraper/scrape.py          →   data/raw/products_final.csv
+                               data/raw/reviews_final.csv
+                                        ↓
+scraper/clean.py           →   data/clean/products_clean.csv
+                               data/clean/reviews_clean.csv
+                                        ↓
+scraper/analyse.py         →   data/brand_summary.json
+                               data/insights.json
+                               data/reviews_with_aspects.csv
+                                        ↓
+app.py                     →   Streamlit dashboard
+```
+
+---
+
+## Coverage
+
+| Metric | Value |
+|--------|-------|
+| Brands tracked | 5 (Safari, Skybags, American Tourister, VIP, Aristocrat) |
+| Products scraped | 75 |
+| Reviews scraped | 312 |
+| Aspects analyzed | wheels, zipper, handle, material, durability, size, price |
+
+---
+
+## Key Features
+
+**Sentiment Analysis**
+- VADER sentiment scoring per review
+- Weighted polarity per brand
+- Positive / Neutral / Negative breakdown
+
+**Aspect-Level Analysis**
+- 7 aspects tracked per review using keyword extraction
+- Radar chart comparison across brands
+- Surfaces which brand wins on wheels, zippers, durability etc.
+
+**Pricing Intelligence**
+- Average selling price vs MRP per brand
+- Discount depth analysis
+- Value-for-money score normalised to 0–100
+- Combo product detection to avoid skewed averages
+
+**Anomaly Detection**
+- High rating + recurring durability complaints
+- Review trust signals — unverified purchases, short positive reviews, duplicates
+
+**Agent Insights**
+- 5 non-obvious conclusions auto-generated from the full dataset
+- Powered by Groq LLaMA 3.1
+
+**Ask the Agent**
+- Natural language chat grounded in real scraped data
+- Brand-aware context injection
+- Conversational, not robotic
 
 ---
 
 ## Tech Stack
 
-| | Tool | Why |
-|-|------|-----|
-| Scraping | Playwright | Handles dynamic Amazon pages |
-| Sentiment | `nlptown/bert-base-multilingual-uncased-sentiment` | Trained on product reviews, handles Hinglish, far better than SST-2 for Amazon India |
-| Aspects | Keyword match + BERT on sentences | Fixed taxonomy = faster, more controllable than full ABSA models |
-| Themes | TF-IDF | Fast, interpretable, scales to 30k reviews without GPU |
-| Dashboard | Streamlit + Plotly | Rapid deployment, production-grade charts |
-| AI Agent | Groq API (LLaMA 3.1) | Fast inference, context-sliced per query to keep tokens low |
-
----
-
-## Key Findings (Auto-generated)
-
-1. **Safari has the biggest star rating vs sentiment gap** — 4.07★ but BERT polarity -0.154. Stars are unreliable here.
-2. **Skybags is the value winner** — highest sentiment (0.227) at lowest avg price (₹2,178). VFM: 100/100.
-3. **VIP's handle is a hidden failure** — positive overall (0.024) but handle aspect scores -0.402.
-4. **VIP charges ₹1,732 more than Skybags with worse sentiment** — premium not justified.
-5. **Safari and Aristocrat inflate MRP** — 78-79% "discounts" are manufactured perception.
+| Layer | Tools |
+|-------|-------|
+| Scraping | Python, Playwright (async), Microsoft Edge persistent context |
+| Data cleaning | Pandas, Regex |
+| Sentiment | VADER, TextBlob |
+| Dashboard | Streamlit, Plotly |
+| Chat agent | Groq API (LLaMA 3.1 8B Instant) |
+| Storage | CSV, JSON |
 
 ---
 
 ## Setup
 ```bash
+# 1. Clone
+git clone https://github.com/glassz13/luggage-brand-intel
+cd luggage-brand-intel
+
+# 2. Install dependencies
 pip install -r requirements.txt
+
+# 3. Install Playwright browser
+playwright install chromium
+
+# 4. Scrape data (requires Amazon India login in Edge)
+python scraper/scrape.py
+
+# 5. Clean data
+python scraper/clean.py
+
+# 6. Run analysis
+python scraper/analyse.py
+
+# 7. Launch dashboard
 streamlit run app.py
 ```
 
-To re-run the full pipeline after scraping new data:
-```bash
-python scraper.py
-python sentiment.py
-python insights.py
-streamlit run app.py
+### Secrets (for chat agent)
+Create `.streamlit/secrets.toml`:
+```toml
+GROK_API_KEY = "your_groq_api_key_here"
 ```
 
 ---
 
-## File Structure
+## Project Structure
 ```
 luggage-brand-intel/
-├── app.py              # Streamlit dashboard
-├── scraper.py          # Amazon India scraper
-├── sentiment.py        # Full NLP pipeline → brand_summary.json
-├── insights.py         # Auto-generates insights.json
+├── app.py                    # Streamlit dashboard
 ├── requirements.txt
-└── data/
-    ├── clean/
-    │   ├── products_clean.csv
-    │   └── reviews_clean.csv
-    └── analyzed/
-        ├── brand_summary.json
-        ├── reviews_with_aspects.csv
-        └── insights.json
+├── scraper/
+│   ├── scrape.py             # Amazon scraper (Playwright)
+│   ├── clean.py              # Data cleaning + normalization
+│   └── analyse.py            # Sentiment + aspect analysis
+├── data/
+│   ├── raw/                  # Raw scraped data
+│   │   ├── products_final.csv
+│   │   └── reviews_final.csv
+│   └── clean/                # Cleaned + enriched data
+│       ├── products_clean.csv
+│       ├── reviews_clean.csv
+│       ├── reviews_with_aspects.csv
+│       ├── brand_summary.json
+│       └── insights.json
+└── README.md
 ```
 
 ---
 
-## Limitations & How to Scale
+## Anti-Detection Approach
 
-**Current state:** 312 reviews, 5 brands — proof of concept. Directionally correct but statistically thin. 2,000+ reviews per brand makes conclusions significantly more reliable.
+Amazon actively blocks scrapers. The scraper handles this through:
+- Microsoft Edge persistent context with real user profile and cookies
+- Randomised human-like delays between requests
+- `webdriver` property masked via init script
+- CAPTCHA detection with exponential backoff retry
+- Global review hash deduplication to avoid redundant requests
+- `sortBy=recent` + star filter rotation to get unique reviews
 
-**To scale to 50k reviews + more brands:**
+---
 
-- Switch `device=-1` to `device=0` in `sentiment.py` for GPU — 15x faster BERT inference
-- Replace the AI agent's JSON slice injection with **RAG** — chunk reviews by brand+aspect, embed with `sentence-transformers`, store in ChromaDB, retrieve top-k chunks per query. Enables answering *"show me exact reviews where VIP handle broke"*
-- Scraper already brand-agnostic — add Nasher Miles, Samsonite etc by updating the brand list only
-- Move to FastAPI + React for production, keep `sentiment.py` as a nightly batch job
+## Data Quality Notes
+
+- **Variant deduplication** — different ASINs for same product (color/size variants) are kept as separate products since they have distinct prices, but their shared reviews are deduplicated via MD5 hash
+- **Combo detection** — "Set of 2" listings flagged with `is_combo=True` and excluded from per-unit price analysis
+- **Size normalization** — raw cm values bucketed into Cabin / Medium / Large / XL categories
+- **Review trust signals** — unverified purchases, suspiciously short positive reviews, and duplicate patterns flagged per brand
 
 ---
 
 ## Author
 
-**Mohit Kumar** · [LinkedIn](https://www.linkedin.com/in/mohit-kumar-116753375/)
-
-Built for the Moonshot AI Agent Internship Assignment · April 2026
+**Mohit Kumar Meena**
+Built for Moonshot AI Agent Internship Assignment
