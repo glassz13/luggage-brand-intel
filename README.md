@@ -1,7 +1,7 @@
 # 🧳 Luggage Brand Intel
 > Competitive intelligence dashboard for luggage brands on Amazon India — built for Moonshot AI Agent Internship Assignment
 
-**[🚀 Live Dashboard](https://luggage-brand-intel-96woi23brqzhsn5pqslnmv.streamlit.app/)** · **[GitHub](https://github.com/glassz13/luggage-brand-intel)** · Built by **Mohit Kumar Meena**
+**[Live Dashboard](https://luggage-brand-intel-96woi23brqzhsn5pqslnmv.streamlit.app/)** 
 
 ---
 
