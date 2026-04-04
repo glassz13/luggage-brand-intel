@@ -793,7 +793,7 @@ Rules:
 - Never hallucinate metrics. Only use data provided.
 - If data isn't available, say: "Hmm, I don't have enough data on that one."
 - Keep answers under 150 words.
-- Always end with a light follow-up offer like "Want me to dig deeper into any brand?" """
+- Always end with a light follow-up offer like "Want me to dig deeper into any brand?"""
 
     def detect_brands(q):
         return list(set(
